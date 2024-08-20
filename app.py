@@ -34,15 +34,20 @@ def finalizar_app():
     exibir_subtitulo('Encerrando o aplicativo\n')
 
 def voltar_ao_menu_principal():
-    """
-    Aguarda o usuário pressionar uma tecla para voltar ao menu principal.
+    """ Solicita uma tecla para voltar ao menu principal 
+    
+    Outputs:
+    - Retorna ao menu principal
     """
     input('\nDigite uma tecla para voltar ao menu ')
     main()
 
 def opcao_invalida():
     """
-    Exibe uma mensagem de opção inválida e retorna ao menu principal.
+    Exibe mensagem de opção inválida e retorna ao menu principal 
+    
+    Outputs:
+    - Retorna ao menu principal
     """
     print('Opção invalida\n')
     voltar_ao_menu_principal()
@@ -63,7 +68,14 @@ def exibir_subtitulo(texto):
 
 def cadastrar_novo_restaurante():
     """
-    Cadastra um novo restaurante.
+    Essa função é responsável por cadastrar um novo restaurante 
+    
+    Inputs:
+    - Nome do restaurante
+    - Categoria
+
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
     """
     exibir_subtitulo('Cadastro de novos restaurantes')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
@@ -75,7 +87,10 @@ def cadastrar_novo_restaurante():
 
 def listar_restaurantes():
     """
-    Lista todos os restaurantes cadastrados.
+    Lista os restaurantes presentes na lista 
+    
+    Outputs:
+    - Exibe a lista de restaurantes na tela
     """
     exibir_subtitulo('Restaurantes cadastrados:')
 
@@ -90,7 +105,10 @@ def listar_restaurantes():
 
 def alternar_estado_do_restaurante():
     """
-    Alterna o estado (ativo/inativo) de um restaurante.
+    Altera o estado ativo/desativado de um restaurante 
+    
+    Outputs:
+    - Exibe mensagem indicando o sucesso da operação
     """
     exibir_subtitulo('Alternando o estado do restaurante')
     nome_restaurante = input('Digite o nome do restaurante que deseja alternar o estado: ')
@@ -108,7 +126,10 @@ def alternar_estado_do_restaurante():
 
 def escolher_opcao():
     """
-    Lê a opção escolhida pelo usuário e executa a função correspondente.
+    Solicita e executa a opção escolhida pelo usuário 
+    
+    Outputs:
+    - Executa a opção escolhida pelo usuário
     """
     try:
         opcao_escolhida = int(input('Escolha uma opção: '))
